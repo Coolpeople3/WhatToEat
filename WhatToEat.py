@@ -1,5 +1,5 @@
 import json
-#testing
+
 # File to store food ideas
 FILE_NAME = "food_ideas.json"
 
