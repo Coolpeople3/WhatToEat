@@ -35,7 +35,7 @@ def list_food_ideas_within_range():
     ideas = load_food_ideas()
 
     # Print all ideas to confirm they're being loaded
-    print("Loaded food ideas:", ideas)
+    #print("Loaded food ideas:", ideas)
 
     # Filter food ideas within the time range
     matching_ideas = [
