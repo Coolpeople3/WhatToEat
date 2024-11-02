@@ -54,7 +54,7 @@ def list_food_ideas_within_range():
 def main():
     try:
         while True:
-            print("\n--- Food Idea Generator ---")
+            print("\n--- Hitarth's Food Idea Generator ---")
             print("1. Input new food idea")
             print("2. List food ideas within time range")
             print("3. Exit")
