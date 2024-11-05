@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 # File to store food ideas
+FILE_NAME = "C:/Users/hitar/OneDrive/Desktop/WhatToEat/food_ideas.json"
 
 
 # Load food ideas from file, or create a new list if the file doesn't exist
