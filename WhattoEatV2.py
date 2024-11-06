@@ -1,9 +1,10 @@
 import json
 import tkinter as tk
 from tkinter import messagebox
+from pathlib import Path
 
 # File to store food ideas
-FILE_NAME = "C:/Users/hitar/OneDrive/Desktop/WhatToEat/food_ideas.json"
+FILE_NAME = Path.home() / "Documents" / "food_ideas.json"
 
 
 # Load food ideas from file, or create a new list if the file doesn't exist
@@ -17,6 +18,8 @@ def load_food_ideas():
 
 # Save food ideas to file
 def save_food_ideas(ideas):
+    # Ensure the directory exists
+    FILE_NAME.parent.mkdir(parents=True, exist_ok=True)
     with open(FILE_NAME, "w") as file:
         json.dump(ideas, file)
 
