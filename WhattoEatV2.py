@@ -6,12 +6,12 @@ from pathlib import Path
 # File to store food ideas
 FILE_NAME = Path.home() / "Documents" / "food_ideas.json"
 
-# Default food ideas to preload
+# Default food ideas to preload, IF YOU MODIFY THIS PART OF THEE CODE, BE SURE TO DELETE THE "FOOD_IDEAS.JSON" FILE FROM THE DOCUMENTS FOLDER ON YOUR COMPUTER SO THAT IT'LL CREATE A NEW ONE WITH YOUR NEW FOODS
 DEFAULT_FOOD_IDEAS = [
     {"name": "Pasta", "time_required": 20},
     {"name": "Salad", "time_required": 10},
     {"name": "Grilled Cheese", "time_required": 5},
-    {"name": "Stir Fry", "time_required": 15}
+    {"name": "Sandwich", "time_required": 10}
 ]
 
 # Load food ideas from file, or create a new list if the file doesn't exist
@@ -63,7 +63,7 @@ def list_food_ideas_within_range():
 # Create main window
 def create_main_window():
     window = tk.Tk()
-    window.title("Food Idea Generator")
+    window.title("Hitarth's Food Idea Generator")
     label_food_name = tk.Label(window, text="Enter the name of the food:")
     label_food_name.grid(row=0, column=0, padx=10, pady=10)
     global entry_food_name
@@ -83,7 +83,7 @@ def create_main_window():
     entry_time_available.grid(row=3, column=1, padx=10, pady=10)
     button_list_food = tk.Button(window, text="List Food Ideas", width=20, command=list_food_ideas_within_range)
     button_list_food.grid(row=4, column=0, columnspan=2, pady=10)
-    label_food_ideas = tk.Label(window, text="Matching Food Ideas:")
+    label_food_ideas = tk.Label(window, text="Matching Food Ideas Within 15 Minutes:")
     label_food_ideas.grid(row=5, column=0, padx=10, pady=10)
     global listbox_food_ideas
     listbox_food_ideas = tk.Listbox(window, width=50, height=10)
